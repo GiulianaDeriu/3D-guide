@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>3d guide</title>
+</head>
+<body>
+    
+<div class="outer">
+    
+    <input type="checkbox" id="usePerspective" class="hidden" onchange="setActive(this);" checked>
+    <input type="checkbox" id="runAnimation" class="hidden" onchange="setAnimation(this);">
+    <div class="labels">
+        <label for="usePerspective" class="usePerspective">
+            Use perspective
+        </label>
+        <label for="runAnimation" class="runAnimation">
+            Run animation
+        </label>
+    </div>
+
+    <div class="slider1">
+        <input type="range" class="vertical" data-var="prespective" data-unit="px" min="250" max="2500" value="1000" oninput="setCssVariables(this);">
+    </div>
+
+    <div class="container">
+        <div class="cube">
+            <div class="side front"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side back"></div>
+            <div class="side top"></div>
+            <div class="side bottom"></div>
+        </div>
+    </div>
+
+    <div class="slider2">
+        <input type="range" class="vertical" data-var="originVertical" data-unit="%" min="-100" max="200" value="0" oninput="setCssVariables(this);">
+    </div>
+
+    <div class="slider3">
+        <input type="range" class="horizontal" data-var="originHorizontal" data-unit="%" min="-100" max="200" value="100" oninput="setCssVariables(this);">
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
